@@ -1,5 +1,5 @@
 <?php 
-    require 'views/utils/utils.php';
+    require 'utils/utils.php';
     require 'entities/ImagenGaleria.class.php';
     
     $arrayImg=[];
