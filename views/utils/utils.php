@@ -1,10 +1,6 @@
 <?php
-
-    $arrayOpciones = ["contact","blog","about","index"];
-
     function esOpcionMenuActiva(string $opcion): bool{
-        $opcionUri=$_SERVER['REQUEST_URI'];
-        if (str_contains($opcionUri,$opcion)) {
+        if ($_SERVER['REQUEST_URI']==$opcion) {
             return true;
         } else {
             return false;
@@ -12,7 +8,13 @@
         
     };
 
-    foreach ($arrayOpciones as $key) {
-        print(esOpcionMenuActiva($key));
+    function existeOpcionMenuActivaArray(...$array) {
+        foreach ($array as $key) {
+            if (esOpcionMenuActiva($key)) {
+                return true;
+            } else {
+                return false;
+            }
+        }
     }
 ?>
