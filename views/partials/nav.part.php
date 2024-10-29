@@ -18,6 +18,7 @@
 				<li class="<?php if (esOpcionMenuActiva('/about.php')) echo 'active' ?> lien"><a href="about.php"><i class="fa fa-bookmark sr-icons"></i> About</a></li>
 				<li class="<?php if (existeOpcionMenuActivaArray('/blog.php','/single_post.php')) echo 'active' ?> lien"><a href="blog.php"><i class="fa fa-file-text sr-icons"></i> Blog</a></li>
 				<li class="<?php if (esOpcionMenuActiva('/contact.php')) echo 'active' ?> lien"><a href="contact.php"><i class="fa fa-phone-square sr-icons"></i> Contact</a></li>
+				<li class="<?php if (esOpcionMenuActiva('/gallery.php')) echo 'active' ?> lien"><a href="gallery.php"><i class="fa fa-image sr-icons"></i> Gallery</a></li>
 			</ul>
 		</div>
 	</div>
