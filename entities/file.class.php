@@ -35,9 +35,23 @@ class File
         $this->fileName = $this->file['name'];
         $ruta = $rutaDestino . $this->fileName;
 
+        function renombrarImagen($ruta, $imagen)
+        {
+            $punto = strrpos($imagen, '.');
+            $nombreImagen = substr($imagen, 0, $punto);
+            $extensionImagen = substr($imagen, $punto + 1);
+            $contador = 1;
+            $nuevoNombre = $imagen;
+            while (file_exists($ruta . '/' . $nuevoNombre)) {
+                $nuevoNombre = $nombreImagen . "($contador)" . ($extensionImagen ? ".$extensionImagen" : '');
+                $contador++;
+            }
+
+            return $nuevoNombre;
+        }
+
         if (is_file($ruta) == true) {
-            $fechaActual = date('dmYHis');
-            $this->fileName = $this->fileName . '_' . $fechaActual;
+            $this->fileName = renombrarImagen($rutaDestino, $this->fileName);
             $ruta = $rutaDestino . $this->fileName;
         }
 
@@ -62,3 +76,4 @@ class File
         }
     }
 }
+?>
