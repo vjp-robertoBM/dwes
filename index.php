@@ -1,6 +1,6 @@
 <?php 
     require 'utils/utils.php';
-    require 'entities/ImagenGaleria.class.php';
+    require 'entities/imagenGaleria.class.php';
     
     $arrayImg=[];
     for ($i=1; $i < 13; $i++) {
