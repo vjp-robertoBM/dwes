@@ -62,9 +62,10 @@ body{
 	margin-right: 10px;
 	margin-left: 10px;
 }
-.navbar .nav .lien{
+.navbar .nav .lien:not(:last-child){
 	border-right: solid 1px rgb(170,170,170);
 }
+
 }
 
 @media(max-width: 768px){
