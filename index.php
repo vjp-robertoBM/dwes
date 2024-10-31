@@ -12,5 +12,10 @@
         array_push($arrayImg,$img);
     }
 
+    $arrayAsociados=[];
+    for ($i=1; $i < 3; $i++) {
+        
+    }
+
     require 'views/index.view.php';
 ?>

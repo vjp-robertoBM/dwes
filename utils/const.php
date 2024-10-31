@@ -1,4 +1,9 @@
 <?php 
+
+    function getErrorString () {
+        
+    }
+
     define('ERROR_MV_UP_FILE',9);
 
     $errorStrings[UPLOAD_ERR_OK] = "No hay ningún error.";
