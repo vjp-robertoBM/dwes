@@ -1,5 +1,6 @@
 <?php
-require __DIR__ . '/fileException.class.php';
+require_once 'entities/fileException.class.php';
+require_once 'utils/const.php';
 class File
 {
     private $file;
@@ -76,4 +77,3 @@ class File
         }
     }
 }
-?>

@@ -1,5 +1,7 @@
 <?php
-class ImagenGaleria
+require_once 'entities/database/IEntity.class.php';
+
+class ImagenGaleria implements IEntity
 {
     const RUTA_IMAGENES_PORTFOLIO='images/index/portfolio/';
     const RUTA_IMAGENES_GALLERY='images/index/gallery/';
@@ -9,14 +11,16 @@ class ImagenGaleria
     private $numVisualizaciones;
     private $numLikes;
     private $numDownloads;
+    private $id;
 
-    public function __construct($nombre,  $descripcion,  $numVisualizaciones,  $numLikes,  $numDownloads)
+    public function __construct($nombre='',  $descripcion='',  $numVisualizaciones=0,  $numLikes=0,  $numDownloads=0, $id=0)
     {
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
         $this->numVisualizaciones = $numVisualizaciones;
         $this->numLikes = $numLikes;
         $this->numDownloads = $numDownloads;
+        $this->id = $id;
     }
 
     public function getNombre(): string
@@ -43,6 +47,12 @@ class ImagenGaleria
     {
         return $this->numDownloads;
     }
+
+    public function getId(): int
+    {
+        return $this->id;
+    }
+
     public function setNombre($nombre): void
     {
         $this->nombre = $nombre;
@@ -68,11 +78,28 @@ class ImagenGaleria
         $this->numDownloads = $numDownloads;
     }
 
+    public function setId(): int
+    {
+        return $this->id;
+    }
+
     public function getUrlPortfolio():string {
         return self::RUTA_IMAGENES_PORTFOLIO.$this->getNombre();
     }
 
     public function getUrlGallery():string {
         return self::RUTA_IMAGENES_GALLERY.$this->getNombre();
+    }
+
+    public function toArray(): array
+    {
+        return[
+            'id' => $this->getId(),
+            'nombre' => $this->getNombre(),
+            'descripcion' => $this->getDescripcion(),
+            'numVisualizaciones' => $this->getNumVisualizaciones(),
+            'numLikes' => $this->getNumLikes(),
+            'numDescargas' => $this->getNumDownloads()
+        ];
     }
 }
