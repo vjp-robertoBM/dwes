@@ -1,21 +1,28 @@
-<?php 
-    require 'utils/utils.php';
-    require 'entities/imagenGaleria.class.php';
-    
-    $arrayImg=[];
-    for ($i=1; $i < 13; $i++) {
-        $r1 = rand(1000,5000);
-        $r2 = rand(100,500);
-        $r3 = rand(10,200);
-        $img = new ImagenGaleria($i.'.jpg','Descripción imagen '.$i,$r1,$r2,$r3);
+<?php
+require 'utils/utils.php';
+require 'entities/imagenGaleria.class.php';
+require 'entities/asociado.class.php';
 
-        array_push($arrayImg,$img);
-    }
+$arrayImg = [];
+for ($i = 1; $i < 13; $i++) {
+    $r1 = rand(1000, 5000);
+    $r2 = rand(100, 500);
+    $r3 = rand(10, 200);
+    $img = new ImagenGaleria($i . '.jpg', 'Descripción imagen ' . $i, $r1, $r2, $r3);
 
-    $arrayAsociados=[];
-    for ($i=1; $i < 3; $i++) {
-        
-    }
+    array_push($arrayImg, $img);
+}
 
-    require 'views/index.view.php';
-?>
+$arrayAsociados = [
+    new Asociado("Asociado1", "log1,jpg", "Desc1"),
+    new Asociado("Asociado2", "log2,jpg", "Desc2"),
+    new Asociado("Asociado3", "log3,jpg", "Desc3")
+];
+
+if (count($arrayAsociados) <= 3) {
+    $asociados = $arrayAsociados;
+} else {
+    $asociados = extraerAsociadosAleatorios($arrayAsociados);
+}
+
+require 'views/index.view.php';

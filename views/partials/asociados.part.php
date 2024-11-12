@@ -8,13 +8,14 @@
             <h4>Our Main Partners</h4>
             <hr>
             <div class="text-muted text-left">
-                <?php 
-                echo 
-                '<ul class="list-inline">
-                    <li><img src="images/index/log2.jpg" alt="logo"></li>
-                    <li>First Partner Name</li>
-                </ul>';
+            <ul class="list-inline">
+                <?php
+                foreach ($asociados as $asociado) {
+                    echo '<li><img src="images/index/'.$asociado->getLogo.'" alt="'.$asociado->getDescripcion.'"></li>
+                    <li>'.$asociado->getNombre.'</li>';
+                }
                 ?>
+                </ul>
             </div>
         </div>
     </div>

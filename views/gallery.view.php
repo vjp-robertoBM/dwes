@@ -35,6 +35,18 @@ include __DIR__ . '/partials/nav.part.php';
 				</div>
 				<div class="form-group">
 					<div class="col-xs-12">
+						<label class="label-control">Categoría</label>
+						<select class="form-control" name="categoria">
+							<?php foreach ($categorias as $categoria) : ?>
+								<option value="<?= $categoria->getId() ?>">
+									<?= $categoria->getNombre() ?>
+								</option>
+							<?php endforeach; ?>
+						</select>
+					</div>
+				</div>
+				<div class="form-group">
+					<div class="col-xs-12">
 						<label class="label-control">Descripción</label>
 						<textarea class="form-control" name="descripcion"><?= $descripcion ?></textarea>
 						<button class="pull-right btn btn-lg sr-button">ENVIAR</button>
@@ -48,23 +60,25 @@ include __DIR__ . '/partials/nav.part.php';
 						<tr>
 							<th scope="col">#</th>
 							<th scope="col">Imagen</th>
+							<th scope="col">Categoría</th>
 							<th scope="col">Visualizaciones</th>
 							<th scope="col">Likes</th>
 							<th scope="col">Descargas</th>
 						</tr>
 					</thead>
 					<tbody>
-						<?php foreach ($imagenes as $img):?>
+						<?php foreach ($imagenes as $img): ?>
 							<tr>
-								<th scope="row"><?=$img->getID()?></th>
+								<th scope="row"><?= $img->getID() ?></th>
 								<td>
-									<img src="<?=$img->getUrlGallery()?>" alt="<?=$img->getDescripcion()?>" title="<?=$img->getDescripcion()?>" width="100px">
+									<img src="<?= $img->getUrlGallery() ?>" alt="<?= $img->getDescripcion() ?>" title="<?= $img->getDescripcion() ?>" width="100px">
 								</td>
-								<td><?=$img->getNumVisualizaciones()?></td>
-								<td><?=$img->getNumLikes()?></td>
-								<td><?=$img->getNumDownloads()?></td>
-							</tr> 
-						<?php endforeach;?>
+								<td><?= $categorias[$img->getCategoria() - 1]->getNombre() ?></td>
+								<td><?= $img->getNumVisualizaciones() ?></td>
+								<td><?= $img->getNumLikes() ?></td>
+								<td><?= $img->getNumDownloads() ?></td>
+							</tr>
+						<?php endforeach; ?>
 					</tbody>
 				</table>
 			</div>
