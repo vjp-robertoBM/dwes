@@ -17,4 +17,13 @@
             }
         }
     }
+
+    function extraerAsociados($asociados) {
+        if (count($asociados) <= 3) {
+            return $asociados;
+        } else {
+            shuffle($asociados);
+            return array_slice($asociados, 0, 3);
+        }
+    }
 ?>
