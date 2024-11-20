@@ -1,7 +1,7 @@
 <?php
+require 'utils/utils.php';
 require 'entities/imagenGaleria.class.php';
 require 'entities/asociado.class.php';
-require 'utils/utils.php';
 
 $arrayImg = [];
 for ($i = 1; $i < 13; $i++) {
@@ -14,11 +14,15 @@ for ($i = 1; $i < 13; $i++) {
 }
 
 $arrayAsociados = [
-    new Asociado("Asociado 1", "log1.jpg", "Descripción 1"),
-    new Asociado("Asociado 2", "log2.jpg", "Descripción 2"),
-    new Asociado("Asociado 3", "log3.jpg", "Descripción 3"),
+    new Asociado("Asociado1", "log1,jpg", "Desc1"),
+    new Asociado("Asociado2", "log2,jpg", "Desc2"),
+    new Asociado("Asociado3", "log3,jpg", "Desc3")
 ];
 
-$asociados = extraerAsociados($arrayAsociados);
+if (count($arrayAsociados) <= 3) {
+    $asociados = $arrayAsociados;
+} else {
+    $asociados = extraerAsociadosAleatorios($arrayAsociados);
+}
 
 require 'views/index.view.php';
