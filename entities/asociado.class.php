@@ -1,15 +1,20 @@
 <?php
-class Asociado
+require_once 'entities/database/IEntity.class.php';
+class Asociado implements IEntity
 {
+    const RUTA_LOGO = 'images/logo/';
+
     private $nombre;
     private $logo;
     private $descripcion;
+    private $id;
 
-    public function __construct($nombre,  $logo,  $descripcion)
+    public function __construct($nombre = '',  $logo = '',  $descripcion = '', $id = 0)
     {
         $this->nombre = $nombre;
         $this->logo = $logo;
         $this->descripcion = $descripcion;
+        $this->id = $id;
     }
     public function getNombre()
     {
@@ -26,6 +31,11 @@ class Asociado
         return $this->descripcion;
     }
 
+    public function getId()
+    {
+        return $this->id;
+    }
+
     public function setNombre($nombre): void
     {
         $this->nombre = $nombre;
@@ -39,5 +49,20 @@ class Asociado
     public function setDescripcion($descripcion): void
     {
         $this->descripcion = $descripcion;
+    }
+
+    public function setId($id): void
+    {
+        $this->id = $id;
+    }
+
+    public function toArray(): array
+    {
+        return [
+            'id' => $this->getId(),
+            'nombre' => $this->getNombre(),
+            'logo' => $this->getLogo(),
+            'descripcion' => $this->getDescripcion()
+        ];
     }
 }
