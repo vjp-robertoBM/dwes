@@ -3,8 +3,8 @@ require_once 'entities/database/IEntity.class.php';
 
 class ImagenGaleria implements IEntity
 {
-    const RUTA_IMAGENES_PORTFOLIO = 'images/index/portfolio/';
-    const RUTA_IMAGENES_GALLERY = 'images/index/gallery/';
+    const RUTA_IMAGENES_PORTFOLIO='images/index/portfolio/';
+    const RUTA_IMAGENES_GALLERY='images/index/gallery/';
 
     private $nombre;
     private $descripcion;
@@ -12,9 +12,8 @@ class ImagenGaleria implements IEntity
     private $numLikes;
     private $numDownloads;
     private $id;
-    private $categoria;
 
-    public function __construct($nombre = '',  $descripcion = '',int $categoria = 0, $numVisualizaciones = 0,  $numLikes = 0,  $numDownloads = 0, $id = 0)
+    public function __construct($nombre='',  $descripcion='',  $numVisualizaciones=0,  $numLikes=0,  $numDownloads=0, $id=0)
     {
         $this->nombre = $nombre;
         $this->descripcion = $descripcion;
@@ -22,42 +21,36 @@ class ImagenGaleria implements IEntity
         $this->numLikes = $numLikes;
         $this->numDownloads = $numDownloads;
         $this->id = $id;
-        $this->categoria = $categoria;
     }
 
-    public function getNombre()
+    public function getNombre(): string
     {
         return $this->nombre;
     }
 
-    public function getDescripcion()
+    public function getDescripcion(): string
     {
         return $this->descripcion;
     }
 
-    public function getNumVisualizaciones()
+    public function getNumVisualizaciones(): int
     {
         return $this->numVisualizaciones;
     }
 
-    public function getNumLikes()
+    public function getNumLikes(): int
     {
         return $this->numLikes;
     }
 
-    public function getNumDownloads()
+    public function getNumDownloads(): int
     {
         return $this->numDownloads;
     }
 
-    public function getId()
+    public function getId(): int
     {
         return $this->id;
-    }
-
-    public function getCategoria()
-    {
-        return $this->categoria;
     }
 
     public function setNombre($nombre): void
@@ -85,33 +78,25 @@ class ImagenGaleria implements IEntity
         $this->numDownloads = $numDownloads;
     }
 
-    public function setId($id): void
+    public function setId(): int
     {
-        $this->id = $id;
+        return $this->id;
     }
 
-    public function setCategoria($categoria): void
-    {
-        $this->categoria = $categoria;
+    public function getUrlPortfolio():string {
+        return self::RUTA_IMAGENES_PORTFOLIO.$this->getNombre();
     }
 
-    public function getUrlPortfolio(): string
-    {
-        return self::RUTA_IMAGENES_PORTFOLIO . $this->getNombre();
-    }
-
-    public function getUrlGallery(): string
-    {
-        return self::RUTA_IMAGENES_GALLERY . $this->getNombre();
+    public function getUrlGallery():string {
+        return self::RUTA_IMAGENES_GALLERY.$this->getNombre();
     }
 
     public function toArray(): array
     {
-        return [
+        return[
             'id' => $this->getId(),
             'nombre' => $this->getNombre(),
             'descripcion' => $this->getDescripcion(),
-            'categoria' => $this->getCategoria(),
             'numVisualizaciones' => $this->getNumVisualizaciones(),
             'numLikes' => $this->getNumLikes(),
             'numDescargas' => $this->getNumDownloads()
