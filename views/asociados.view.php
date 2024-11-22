@@ -62,7 +62,7 @@ include __DIR__ . '/partials/nav.part.php';
 								<th scope="row"><?= $asociado->getID() ?></th>
 								<td><?= $asociado->getNombre() ?></td>
 								<td>
-									<img src="<?= $asociado->getLogo() ?>" alt="<?= $asociado->getDescripcion() ?>" title="<?= $asociado->getDescripcion() ?>" width="100px">
+									<img src="<?= $asociado->getUrlLogo() ?>" alt="<?= $asociado->getDescripcion() ?>" title="<?= $asociado->getDescripcion() ?>" width="100px">
 								</td>
 							</tr>
 						<?php endforeach; ?>

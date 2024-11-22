@@ -56,12 +56,17 @@ class Asociado implements IEntity
         $this->id = $id;
     }
 
+    public function getUrlLogo(): string
+    {
+        return self::RUTA_LOGO . $this->getLogo();
+    }
+
     public function toArray(): array
     {
         return [
             'id' => $this->getId(),
             'nombre' => $this->getNombre(),
-            'logo' => $this->getLogo(),
+            'logo' => $this->logo->getFileName(),
             'descripcion' => $this->getDescripcion()
         ];
     }
