@@ -10,7 +10,7 @@
             <div class="text-muted text-left">
                 <?php
                 foreach ($asociados as $asociado) {
-                    echo '<ul class="list-inline"><li><img src="images/index/'.$asociado->getLogo().'" alt="'.$asociado->getDescripcion().'"></li>
+                    echo '<ul class="list-inline"><li><img src="'.$asociado->getUrlLogo().'" alt="'.$asociado->getDescripcion().'" width="50px"></li>
                     <li>'.$asociado->getNombre().'</li></ul>';
                 }
                 ?>

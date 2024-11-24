@@ -1,6 +1,8 @@
 <?php
 require 'entities/imagenGaleria.class.php';
 require 'entities/asociado.class.php';
+require 'entities/connection.class.php';
+require 'entities/repository/asociadoRepositorio.class.php';
 require 'utils/utils.php';
 
 $arrayImg = [];
@@ -13,13 +15,22 @@ for ($i = 1; $i < 13; $i++) {
     array_push($arrayImg, $img);
 }
 
-$arrayAsociados = [
-    new Asociado("Asociado1", "log1.jpg", "Desc1"),
-    new Asociado("Asociado2", "log2.jpg", "Desc2"),
-    new Asociado("Asociado3", "log3.jpg", "Desc3"),
-    new Asociado("Asociado4", "log2.jpg", "Desc4"),
-    new Asociado("Asociado5", "log3.jpg", "Desc5")
-];
+$erroresAsociados = [];
+$arrayAsociados = [];
+
+try {
+    $config = require_once 'app/config.php';
+    App::bind('config', $config);
+    $asociadoRepositorio = new AsociadoRepositorio();
+    $arrayAsociados = $asociadoRepositorio->findAll();
+
+} catch (QueryException $exception) {
+    $erroresAsociados[] = $exception->getMessage();
+} catch (PDOException $exception) {
+    $erroresAsociados[] = $exception->getMessage();
+} catch (AppException $exception) {
+    $erroresAsociados[] = $exception->getMessage();
+}
 
 $asociados = extraerAsociados($arrayAsociados);
 

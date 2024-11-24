@@ -21,26 +21,10 @@ try {
         $tiposAceptados = ['image/jpeg', 'image/jpg', 'image/gif', 'image/png'];
         $logo = new File('imagen', $tiposAceptados);
         $logo->saveUploadFile(Asociado::RUTA_LOGO);
-
-
-        // $sql = "INSERT INTO imagenes (nombre,descripcion) VALUES (:nombre, :descripcion)";
-        // $pdoStatement = $connection->prepare($sql);
-        // $parametersStatementArray = [':nombre' => $imagen->getFileName(), ':descripcion' => $descripcion];
-        // $response = $pdoStatement->execute($parametersStatementArray);
-
         $asociado = new Asociado($nombre,$logo,$descripcion);
         $asociadoRepositorio->save($asociado);
         $descripcion = '';
         $mensaje = 'Imagen guardada';
-
-        // if ($response === false) {
-        //     $errores[] = "No se ha podido guardar la imagen en la BD";
-        // } else {
-        //     $descripcion = '';
-        //     $mensaje = 'Imagen guardada';
-        // }
-        // $querySql = 'Select * from imagenes';
-        // $queryStatement = $connection->query($querySql);
     }
     $asociados = $asociadoRepositorio->findAll();
 } catch (FileException $exception) {

@@ -25,26 +25,10 @@ try {
         $imagen = new File('imagen', $tiposAceptados);
         $imagen->saveUploadFile(ImagenGaleria::RUTA_IMAGENES_GALLERY);
         $imagen->copyFile(ImagenGaleria::RUTA_IMAGENES_GALLERY, ImagenGaleria::RUTA_IMAGENES_PORTFOLIO);
-
-
-        // $sql = "INSERT INTO imagenes (nombre,descripcion) VALUES (:nombre, :descripcion)";
-        // $pdoStatement = $connection->prepare($sql);
-        // $parametersStatementArray = [':nombre' => $imagen->getFileName(), ':descripcion' => $descripcion];
-        // $response = $pdoStatement->execute($parametersStatementArray);
-
         $imagenGaleria = new ImagenGaleria($imagen->getFileName(), $descripcion, $categoria);
         $imagenRepositorio->save($imagenGaleria);
         $descripcion = '';
         $mensaje = 'Imagen guardada';
-
-        // if ($response === false) {
-        //     $errores[] = "No se ha podido guardar la imagen en la BD";
-        // } else {
-        //     $descripcion = '';
-        //     $mensaje = 'Imagen guardada';
-        // }
-        // $querySql = 'Select * from imagenes';
-        // $queryStatement = $connection->query($querySql);
     }
     $imagenes = $imagenRepositorio->findAll();
 } catch (FileException $exception) {
