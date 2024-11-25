@@ -15,8 +15,8 @@ include __DIR__ . '/partials/nav.part.php';
 			if ($_SERVER["REQUEST_METHOD"] == "POST") {
 				$errores = [];
 
-				if (empty($_POST["first_name"])) {
-					$errores['first_name'] = "El campo First Name no puede estar vacío";
+				if (empty($_POST["nombre"])) {
+					$errores['nombre'] = "El campo First Name no puede estar vacío";
 				}
 
 				if (empty($_POST["email"])) {
@@ -25,17 +25,17 @@ include __DIR__ . '/partials/nav.part.php';
 					$errores['email'] = "Formato de email no válido";
 				}
 
-				if (empty($_POST["subject"])) {
-					$errores['subject'] = "El campo Subject no puede estar vacío";
+				if (empty($_POST["asunto"])) {
+					$errores['asunto'] = "El campo Subject no puede estar vacío";
 				}
 
 				if (empty($errores)) {
 					echo '<div class="alert alert-info">';
-					echo "<p style='color: green;'>First name: " . $_POST["first_name"] . "</p>";
-					echo "<p style='color: green;'>Last name: " . $_POST["last_name"] . "</p>";
+					echo "<p style='color: green;'>First name: " . $_POST["nombre"] . "</p>";
+					echo "<p style='color: green;'>Last name: " . $_POST["apellidos"] . "</p>";
 					echo "<p style='color: green;'>Email: " . $_POST["email"] . "</p>";
-					echo "<p style='color: green;'>Subject: " . $_POST["subject"] . "</p>";
-					echo "<p style='color: green;'>Message: " . $_POST["message"] . "</p>";
+					echo "<p style='color: green;'>Subject: " . $_POST["asunto"] . "</p>";
+					echo "<p style='color: green;'>Message: " . $_POST["texto"] . "</p>";
 					echo '</div>';
 				} else {
 					echo '<div class="alert alert-danger">';
@@ -52,11 +52,11 @@ include __DIR__ . '/partials/nav.part.php';
 				<div class="form-group">
 					<div class="col-xs-6">
 						<label class="label-control">First Name</label>
-						<input class="form-control" type="text" name="first_name">
+						<input class="form-control" type="text" name="nombre">
 					</div>
 					<div class="col-xs-6">
 						<label class="label-control">Last Name</label>
-						<input class="form-control" type="text" name="last_name">
+						<input class="form-control" type="text" name="apellidos">
 					</div>
 				</div>
 				<div class="form-group">
@@ -68,13 +68,13 @@ include __DIR__ . '/partials/nav.part.php';
 				<div class="form-group">
 					<div class="col-xs-12">
 						<label class="label-control">Subject</label>
-						<input class="form-control" type="text" name="subject">
+						<input class="form-control" type="text" name="asunto">
 					</div>
 				</div>
 				<div class="form-group">
 					<div class="col-xs-12">
 						<label class="label-control">Message</label>
-						<textarea class="form-control" name="message"></textarea>
+						<textarea class="form-control" name="texto"></textarea>
 						<button class="pull-right btn btn-lg sr-button">SEND</button>
 					</div>
 				</div>
