@@ -10,15 +10,15 @@ class Mensaje implements IEntity
     private $texto;
     private $fecha;
 
-    public function __construct($id = 0, $nombre = '', $apellidos = '', $asunto = '', $email = '', $texto = '')
+    public function __construct($nombre = '', $apellidos = '', $email = '', $asunto = '', $texto = '')
     {
-        $this->id = $id;
+        $this->id = 0;
         $this->nombre = $nombre;
         $this->apellidos = $apellidos;
         $this->asunto = $asunto;
         $this->email = $email;
         $this->texto = $texto;
-        $this->fecha = date("Y-m-d H:i:s");
+        $this->fecha = date('Y-m-d H:i:s');
     }
 
     public function getId()
