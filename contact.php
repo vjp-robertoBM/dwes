@@ -20,15 +20,12 @@ try {
         $mensaje = new Mensaje($nombre,$apellidos,$email,$asunto,$texto);
         $mensajeRepositorio->save($mensaje);
     }
-    $mensajes = $mensajeRepositorio->findAll();
 } catch (QueryException $exception) {
     $errores[] = $exception->getMessage();
 } catch (AppException $exception) {
     $errores[] = $exception->getMessage();
 } catch (PDOException $exception) {
     $errores[] = $exception->getMessage();
-} finally {
-    $mensajes = $mensajeRepositorio->findAll();
 }
 
 require 'views/contact.view.php';
