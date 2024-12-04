@@ -1,5 +1,6 @@
 <?php
 require_once 'entities/appException.class.php';
+require_once 'entities/connection.class.php';
 require_once 'utils/const.php';
 class App
 {

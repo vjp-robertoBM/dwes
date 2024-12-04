@@ -2,7 +2,6 @@
 require 'utils/utils.php';
 require 'entities/file.class.php';
 require 'entities/asociado.class.php';
-require 'entities/connection.class.php';
 require_once 'entities/queryBuilder.class.php';
 require_once 'entities/appException.class.php';
 require_once 'entities/repository/asociadoRepositorio.class.php';
@@ -40,4 +39,4 @@ try {
 }
 
 
-require 'views/asociados.view.php';
+require 'app/views/asociados.view.php';

@@ -28,4 +28,4 @@ try {
     $errores[] = $exception->getMessage();
 }
 
-require 'views/contact.view.php';
+require 'app/views/contact.view.php';

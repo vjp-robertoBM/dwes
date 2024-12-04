@@ -2,7 +2,6 @@
 require 'utils/utils.php';
 require 'entities/file.class.php';
 require 'entities/imagenGaleria.class.php';
-require 'entities/connection.class.php';
 require_once 'entities/queryBuilder.class.php';
 require_once 'entities/appException.class.php';
 require_once 'entities/repository/imagenGaleriaRepositorio.class.php';
@@ -45,4 +44,4 @@ try {
 }
 
 
-require 'views/gallery.view.php';
+require 'app/views/gallery.view.php';
