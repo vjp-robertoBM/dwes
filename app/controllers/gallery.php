@@ -29,7 +29,6 @@ try {
         $descripcion = '';
         $mensaje = 'Imagen guardada';
     }
-    $imagenes = $imagenRepositorio->findAll();
 } catch (FileException $exception) {
     $errores[] = $exception->getMessage();
 } catch (QueryException $exception) {

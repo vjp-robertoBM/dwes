@@ -25,7 +25,6 @@ try {
         $descripcion = '';
         $mensaje = 'Imagen guardada';
     }
-    $asociados = $asociadoRepositorio->findAll();
 } catch (FileException $exception) {
     $errores[] = $exception->getMessage();
 } catch (QueryException $exception) {
