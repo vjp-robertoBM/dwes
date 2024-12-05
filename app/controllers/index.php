@@ -20,6 +20,8 @@ try {
     $erroresAsociados[] = $exception->getMessage();
 } catch (AppException $exception) {
     $erroresAsociados[] = $exception->getMessage();
+} finally {
+    $arrayImg = $imagenRepositorio->findAll();
 }
 
 $erroresAsociados = [];
@@ -36,6 +38,8 @@ try {
     $erroresAsociados[] = $exception->getMessage();
 } catch (AppException $exception) {
     $erroresAsociados[] = $exception->getMessage();
+} finally {
+    $arrayAsociados = $asociadoRepositorio->findAll();
 }
 
 $asociados = extraerAsociados($arrayAsociados);

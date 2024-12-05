@@ -1,0 +1,985 @@
+{
+    "_readme": [
+        "This file locks the dependencies of your project to a known state",
+        "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
+        "This file is @generated automatically"
+    ],
+    "content-hash": "e3dd304e4146148354e6b6449a86bcfc",
+    "packages": [
+        {
+            "name": "monolog/monolog",
+            "version": "1.27.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/Seldaek/monolog.git",
+                "reference": "904713c5929655dc9b97288b69cfeedad610c9a1"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/Seldaek/monolog/zipball/904713c5929655dc9b97288b69cfeedad610c9a1",
+                "reference": "904713c5929655dc9b97288b69cfeedad610c9a1",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "psr/log": "~1.0"
+            },
+            "provide": {
+                "psr/log-implementation": "1.0.0"
+            },
+            "require-dev": {
+                "aws/aws-sdk-php": "^2.4.9 || ^3.0",
+                "doctrine/couchdb": "~1.0@dev",
+                "graylog2/gelf-php": "~1.0",
+                "php-amqplib/php-amqplib": "~2.4",
+                "php-console/php-console": "^3.1.3",
+                "phpstan/phpstan": "^0.12.59",
+                "phpunit/phpunit": "~4.5",
+                "ruflin/elastica": ">=0.90 <3.0",
+                "sentry/sentry": "^0.13",
+                "swiftmailer/swiftmailer": "^5.3|^6.0"
+            },
+            "suggest": {
+                "aws/aws-sdk-php": "Allow sending log messages to AWS services like DynamoDB",
+                "doctrine/couchdb": "Allow sending log messages to a CouchDB server",
+                "ext-amqp": "Allow sending log messages to an AMQP server (1.0+ required)",
+                "ext-mongo": "Allow sending log messages to a MongoDB server",
+                "graylog2/gelf-php": "Allow sending log messages to a GrayLog2 server",
+                "mongodb/mongodb": "Allow sending log messages to a MongoDB server via PHP Driver",
+                "php-amqplib/php-amqplib": "Allow sending log messages to an AMQP server using php-amqplib",
+                "php-console/php-console": "Allow sending log messages to Google Chrome",
+                "rollbar/rollbar": "Allow sending log messages to Rollbar",
+                "ruflin/elastica": "Allow sending log messages to an Elastic Search server",
+                "sentry/sentry": "Allow sending log messages to a Sentry server"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Monolog\\": "src/Monolog"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Jordi Boggiano",
+                    "email": "j.boggiano@seld.be",
+                    "homepage": "http://seld.be"
+                }
+            ],
+            "description": "Sends your logs to files, sockets, inboxes, databases and various web services",
+            "homepage": "http://github.com/Seldaek/monolog",
+            "keywords": [
+                "log",
+                "logging",
+                "psr-3"
+            ],
+            "support": {
+                "issues": "https://github.com/Seldaek/monolog/issues",
+                "source": "https://github.com/Seldaek/monolog/tree/1.27.1"
+            },
+            "funding": [
+                {
+                    "url": "https://github.com/Seldaek",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/monolog/monolog",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2022-06-09T08:53:42+00:00"
+        },
+        {
+            "name": "psr/log",
+            "version": "1.1.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/php-fig/log.git",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/php-fig/log/zipball/d49695b909c3b7628b6289db5479a1c204601f11",
+                "reference": "d49695b909c3b7628b6289db5479a1c204601f11",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "type": "library",
+            "extra": {
+                "branch-alias": {
+                    "dev-master": "1.1.x-dev"
+                }
+            },
+            "autoload": {
+                "psr-4": {
+                    "Psr\\Log\\": "Psr/Log/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "PHP-FIG",
+                    "homepage": "https://www.php-fig.org/"
+                }
+            ],
+            "description": "Common interface for logging libraries",
+            "homepage": "https://github.com/php-fig/log",
+            "keywords": [
+                "log",
+                "psr",
+                "psr-3"
+            ],
+            "support": {
+                "source": "https://github.com/php-fig/log/tree/1.1.4"
+            },
+            "time": "2021-05-03T11:20:27+00:00"
+        },
+        {
+            "name": "symfony/polyfill-ctype",
+            "version": "v1.31.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/polyfill-ctype.git",
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/polyfill-ctype/zipball/a3cc8b044a6ea513310cbd48ef7333b384945638",
+                "reference": "a3cc8b044a6ea513310cbd48ef7333b384945638",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=7.2"
+            },
+            "provide": {
+                "ext-ctype": "*"
+            },
+            "suggest": {
+                "ext-ctype": "For best performance"
+            },
+            "type": "library",
+            "extra": {
+                "thanks": {
+                    "name": "symfony/polyfill",
+                    "url": "https://github.com/symfony/polyfill"
+                }
+            },
+            "autoload": {
+                "files": [
+                    "bootstrap.php"
+                ],
+                "psr-4": {
+                    "Symfony\\Polyfill\\Ctype\\": ""
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Gert de Pagter",
+                    "email": "BackEndTea@gmail.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony polyfill for ctype functions",
+            "homepage": "https://symfony.com",
+            "keywords": [
+                "compatibility",
+                "ctype",
+                "polyfill",
+                "portable"
+            ],
+            "support": {
+                "source": "https://github.com/symfony/polyfill-ctype/tree/v1.31.0"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2024-09-09T11:45:10+00:00"
+        },
+        {
+            "name": "symfony/yaml",
+            "version": "v3.4.47",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/symfony/yaml.git",
+                "reference": "88289caa3c166321883f67fe5130188ebbb47094"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/symfony/yaml/zipball/88289caa3c166321883f67fe5130188ebbb47094",
+                "reference": "88289caa3c166321883f67fe5130188ebbb47094",
+                "shasum": ""
+            },
+            "require": {
+                "php": "^5.5.9|>=7.0.8",
+                "symfony/polyfill-ctype": "~1.8"
+            },
+            "conflict": {
+                "symfony/console": "<3.4"
+            },
+            "require-dev": {
+                "symfony/console": "~3.4|~4.0"
+            },
+            "suggest": {
+                "symfony/console": "For validating YAML files using the lint command"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Symfony\\Component\\Yaml\\": ""
+                },
+                "exclude-from-classmap": [
+                    "/Tests/"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Fabien Potencier",
+                    "email": "fabien@symfony.com"
+                },
+                {
+                    "name": "Symfony Community",
+                    "homepage": "https://symfony.com/contributors"
+                }
+            ],
+            "description": "Symfony Yaml Component",
+            "homepage": "https://symfony.com",
+            "support": {
+                "source": "https://github.com/symfony/yaml/tree/v3.4.47"
+            },
+            "funding": [
+                {
+                    "url": "https://symfony.com/sponsor",
+                    "type": "custom"
+                },
+                {
+                    "url": "https://github.com/fabpot",
+                    "type": "github"
+                },
+                {
+                    "url": "https://tidelift.com/funding/github/packagist/symfony/symfony",
+                    "type": "tidelift"
+                }
+            ],
+            "time": "2020-10-24T10:57:07+00:00"
+        },
+        {
+            "name": "weew/app",
+            "version": "v2.10.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/app.git",
+                "reference": "cf3ed4aacbe50e8eca0c96956f5803257238ecf3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/app/zipball/cf3ed4aacbe50e8eca0c96956f5803257238ecf3",
+                "reference": "cf3ed4aacbe50e8eca0c96956f5803257238ecf3",
+                "shasum": ""
+            },
+            "require": {
+                "weew/commander-container-aware": "^2.0",
+                "weew/config": "^1.1",
+                "weew/container": "^1.0",
+                "weew/contracts": "^1.1",
+                "weew/eventer-container-aware": "^2.0",
+                "weew/helpers-array": "^1.0",
+                "weew/helpers-string": "^1.1",
+                "weew/kernel-container-aware": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Very minimalistic wrapper for a php application.",
+            "support": {
+                "issues": "https://github.com/weew/app/issues",
+                "source": "https://github.com/weew/app/tree/master"
+            },
+            "time": "2016-07-21T11:12:42+00:00"
+        },
+        {
+            "name": "weew/app-monolog",
+            "version": "v1.12.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/app-monolog.git",
+                "reference": "8bb5c502900736d961b735b664e0f365b87dce3d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/app-monolog/zipball/8bb5c502900736d961b735b664e0f365b87dce3d",
+                "reference": "8bb5c502900736d961b735b664e0f365b87dce3d",
+                "shasum": ""
+            },
+            "require": {
+                "monolog/monolog": "^1.18",
+                "weew/app": "^2.0"
+            },
+            "require-dev": {
+                "henrikbjorn/phpspec-code-coverage": "^2.0",
+                "phpspec/phpspec": "^2.4",
+                "satooshi/php-coveralls": "^0.6.1",
+                "weew/helpers-phpspec": "^1.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                },
+                {
+                    "name": "Lukas Angerer",
+                    "email": "lukas.angerer@gmail.com"
+                }
+            ],
+            "description": "Integration of the monolog/monolog package into weew/app package.",
+            "support": {
+                "issues": "https://github.com/weew/app-monolog/issues",
+                "source": "https://github.com/weew/app-monolog/tree/master"
+            },
+            "time": "2016-12-20T15:49:42+00:00"
+        },
+        {
+            "name": "weew/collections",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/collections.git",
+                "reference": "9d7389cc5124622468e03be2fa5c660ff5dcbcd9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/collections/zipball/9d7389cc5124622468e03be2fa5c660ff5dcbcd9",
+                "reference": "9d7389cc5124622468e03be2fa5c660ff5dcbcd9",
+                "shasum": ""
+            },
+            "require": {
+                "weew/contracts": "^1.1.0",
+                "weew/helpers-array": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Collections and dictionaries for php.",
+            "support": {
+                "issues": "https://github.com/weew/collections/issues",
+                "source": "https://github.com/weew/collections/tree/master"
+            },
+            "time": "2016-07-21T11:17:22+00:00"
+        },
+        {
+            "name": "weew/commander",
+            "version": "v2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/commander.git",
+                "reference": "1093ac1270f5bbd82a62f92bda44479a243f2586"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/commander/zipball/1093ac1270f5bbd82a62f92bda44479a243f2586",
+                "reference": "1093ac1270f5bbd82a62f92bda44479a243f2586",
+                "shasum": ""
+            },
+            "require": {
+                "weew/helpers-array": "^1.0",
+                "weew/helpers-string": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Simple command bus.",
+            "support": {
+                "issues": "https://github.com/weew/commander/issues",
+                "source": "https://github.com/weew/commander/tree/master"
+            },
+            "time": "2016-07-21T11:17:24+00:00"
+        },
+        {
+            "name": "weew/commander-container-aware",
+            "version": "v2.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/commander-container-aware.git",
+                "reference": "d1af8dc4921dc253d674884ec7e69cd8ff6ce1b5"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/commander-container-aware/zipball/d1af8dc4921dc253d674884ec7e69cd8ff6ce1b5",
+                "reference": "d1af8dc4921dc253d674884ec7e69cd8ff6ce1b5",
+                "shasum": ""
+            },
+            "require": {
+                "weew/commander": "^2.1",
+                "weew/container": "^1.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Container integration for the weew/commander package.",
+            "support": {
+                "issues": "https://github.com/weew/commander-container-aware/issues",
+                "source": "https://github.com/weew/commander-container-aware/tree/master"
+            },
+            "time": "2016-07-21T11:17:26+00:00"
+        },
+        {
+            "name": "weew/config",
+            "version": "v1.19.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/config.git",
+                "reference": "e0d798e5a9d0e93f37498056d3515f114d86f8c3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/config/zipball/e0d798e5a9d0e93f37498056d3515f114d86f8c3",
+                "reference": "e0d798e5a9d0e93f37498056d3515f114d86f8c3",
+                "shasum": ""
+            },
+            "require": {
+                "symfony/yaml": "^3.0",
+                "weew/contracts": "^1.1",
+                "weew/helpers-array": "^1.0",
+                "weew/helpers-filesystem": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Simple configuration loader.",
+            "support": {
+                "issues": "https://github.com/weew/config/issues",
+                "source": "https://github.com/weew/config/tree/master"
+            },
+            "time": "2016-11-06T10:51:29+00:00"
+        },
+        {
+            "name": "weew/container",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/container.git",
+                "reference": "0e91e459713a316f0fa1be2e8116ede5f21c5cd3"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/container/zipball/0e91e459713a316f0fa1be2e8116ede5f21c5cd3",
+                "reference": "0e91e459713a316f0fa1be2e8116ede5f21c5cd3",
+                "shasum": ""
+            },
+            "require": {
+                "weew/helpers-array": "^1.0.0",
+                "weew/helpers-string": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Dependency injection container.",
+            "support": {
+                "issues": "https://github.com/weew/container/issues",
+                "source": "https://github.com/weew/container/tree/master"
+            },
+            "time": "2016-07-21T11:17:43+00:00"
+        },
+        {
+            "name": "weew/contracts",
+            "version": "v1.4.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/contracts.git",
+                "reference": "72fab09ee765d9d19a26437909194b347e52aa14"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/contracts/zipball/72fab09ee765d9d19a26437909194b347e52aa14",
+                "reference": "72fab09ee765d9d19a26437909194b347e52aa14",
+                "shasum": ""
+            },
+            "require": {
+                "psr/log": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Collection of common interfaces.",
+            "support": {
+                "issues": "https://github.com/weew/contracts/issues",
+                "source": "https://github.com/weew/contracts/tree/v1.4.0"
+            },
+            "time": "2016-09-14T07:54:41+00:00"
+        },
+        {
+            "name": "weew/eventer",
+            "version": "v2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/eventer.git",
+                "reference": "8b8b766ad93e5101c006fd15b89d54bb554b24c9"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/eventer/zipball/8b8b766ad93e5101c006fd15b89d54bb554b24c9",
+                "reference": "8b8b766ad93e5101c006fd15b89d54bb554b24c9",
+                "shasum": ""
+            },
+            "require": {
+                "weew/helpers-array": "^1.0.0",
+                "weew/helpers-string": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Simple event system.",
+            "support": {
+                "issues": "https://github.com/weew/eventer/issues",
+                "source": "https://github.com/weew/eventer/tree/master"
+            },
+            "time": "2016-07-21T11:17:56+00:00"
+        },
+        {
+            "name": "weew/eventer-container-aware",
+            "version": "v2.2.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/eventer-container-aware.git",
+                "reference": "e68819d6f5194dd7831e5c9cd642b7dbe26f1008"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/eventer-container-aware/zipball/e68819d6f5194dd7831e5c9cd642b7dbe26f1008",
+                "reference": "e68819d6f5194dd7831e5c9cd642b7dbe26f1008",
+                "shasum": ""
+            },
+            "require": {
+                "weew/container": "^1.0.0",
+                "weew/eventer": "^2.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Container integration for the weew/eventer package.",
+            "support": {
+                "issues": "https://github.com/weew/eventer-container-aware/issues",
+                "source": "https://github.com/weew/eventer-container-aware/tree/master"
+            },
+            "time": "2016-07-21T13:05:53+00:00"
+        },
+        {
+            "name": "weew/helpers-array",
+            "version": "v1.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/helpers-array.git",
+                "reference": "9bff63111f9765b4277750db8d276d92b3e16ed0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/helpers-array/zipball/9bff63111f9765b4277750db8d276d92b3e16ed0",
+                "reference": "9bff63111f9765b4277750db8d276d92b3e16ed0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/array.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Useful collection of php array helpers.",
+            "support": {
+                "issues": "https://github.com/weew/helpers-array/issues",
+                "source": "https://github.com/weew/helpers-array/tree/master"
+            },
+            "time": "2016-07-21T11:18:01+00:00"
+        },
+        {
+            "name": "weew/helpers-filesystem",
+            "version": "v1.2.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/helpers-filesystem.git",
+                "reference": "61f066960a79a52a46f681b337dbb7d0b37faada"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/helpers-filesystem/zipball/61f066960a79a52a46f681b337dbb7d0b37faada",
+                "reference": "61f066960a79a52a46f681b337dbb7d0b37faada",
+                "shasum": ""
+            },
+            "require": {
+                "weew/helpers-string": "^1.0.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/file.php",
+                    "src/directory.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Collection of useful filesystem helpers.",
+            "support": {
+                "issues": "https://github.com/weew/helpers-filesystem/issues",
+                "source": "https://github.com/weew/helpers-filesystem/tree/master"
+            },
+            "time": "2016-07-21T11:18:10+00:00"
+        },
+        {
+            "name": "weew/helpers-string",
+            "version": "v1.10.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/helpers-string.git",
+                "reference": "1b726f7fe0566f04adb6a746da1caa2afbd2abf0"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/helpers-string/zipball/1b726f7fe0566f04adb6a746da1caa2afbd2abf0",
+                "reference": "1b726f7fe0566f04adb6a746da1caa2afbd2abf0",
+                "shasum": ""
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "files": [
+                    "src/string.php"
+                ]
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Collection of useful php string helpers.",
+            "support": {
+                "issues": "https://github.com/weew/helpers-string/issues",
+                "source": "https://github.com/weew/helpers-string/tree/master"
+            },
+            "time": "2016-12-19T10:01:58+00:00"
+        },
+        {
+            "name": "weew/kernel",
+            "version": "v2.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/kernel.git",
+                "reference": "4dada4aa36ed1f5bebad2a2864941c68fa568a58"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/kernel/zipball/4dada4aa36ed1f5bebad2a2864941c68fa568a58",
+                "reference": "4dada4aa36ed1f5bebad2a2864941c68fa568a58",
+                "shasum": ""
+            },
+            "require": {
+                "weew/collections": "^1.0",
+                "weew/helpers-string": "^1.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Simple kernel for registration and invocation of service providers.",
+            "support": {
+                "issues": "https://github.com/weew/kernel/issues",
+                "source": "https://github.com/weew/kernel/tree/master"
+            },
+            "time": "2016-07-21T11:18:39+00:00"
+        },
+        {
+            "name": "weew/kernel-container-aware",
+            "version": "v2.3.1",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/weew/kernel-container-aware.git",
+                "reference": "f5a28d6f0e9e2abfc7afeef0865b386ab02e1fca"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/weew/kernel-container-aware/zipball/f5a28d6f0e9e2abfc7afeef0865b386ab02e1fca",
+                "reference": "f5a28d6f0e9e2abfc7afeef0865b386ab02e1fca",
+                "shasum": ""
+            },
+            "require": {
+                "weew/container": "^1.2",
+                "weew/kernel": "^2.1"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "^4.7",
+                "satooshi/php-coveralls": "^0.6.1"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Maxim Kott",
+                    "email": "maximkott@gmail.com"
+                }
+            ],
+            "description": "Integration between weew/kernel and weew/container.",
+            "support": {
+                "issues": "https://github.com/weew/kernel-container-aware/issues",
+                "source": "https://github.com/weew/kernel-container-aware/tree/master"
+            },
+            "time": "2016-07-21T11:18:42+00:00"
+        }
+    ],
+    "packages-dev": [],
+    "aliases": [],
+    "minimum-stability": "stable",
+    "stability-flags": {},
+    "prefer-stable": false,
+    "prefer-lowest": false,
+    "platform": {},
+    "platform-dev": {},
+    "plugin-api-version": "2.6.0"
+}

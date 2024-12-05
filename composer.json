@@ -1,0 +1,6 @@
+{
+    "require":{
+        "weew/app-monolog": "^1.12",
+        "monolog/monolog": "^1.27"
+    }
+}
