@@ -1,6 +1,9 @@
 <?php
-require_once 'entities/fileException.class.php';
-require_once 'utils/const.php';
+// require_once 'entities/fileException.class.php';
+// require_once 'utils/const.php';
+
+namespace proyecto\entities;
+
 class File
 {
     private $file;

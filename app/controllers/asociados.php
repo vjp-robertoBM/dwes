@@ -1,10 +1,12 @@
 <?php
-require 'utils/utils.php';
-require 'entities/file.class.php';
-require 'entities/asociado.class.php';
-require_once 'entities/queryBuilder.class.php';
-require_once 'entities/appException.class.php';
-require_once 'entities/repository/asociadoRepositorio.class.php';
+use proyecto\entities\AsociadoRepositorio;
+use proyecto\entities\Asociado;
+use proyecto\entities\File;
+use proyecto\entities\FileException;
+use proyecto\entities\App;
+use proyecto\entities\AppException;
+use proyecto\entities\QueryException;
+use PDOException;
 
 $errores = [];
 $descripcion = "";

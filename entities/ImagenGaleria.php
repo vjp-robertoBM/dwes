@@ -1,7 +1,8 @@
 <?php
-require_once 'entities/database/IEntity.class.php';
+// require_once 'entities/database/IEntity.class.php';
+namespace proyecto\entities;
 
-class ImagenGaleria implements IEntity
+class ImagenGaleria implements database\IEntity
 {
     const RUTA_IMAGENES_PORTFOLIO = 'images/index/portfolio/';
     const RUTA_IMAGENES_GALLERY = 'images/index/gallery/';

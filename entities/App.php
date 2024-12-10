@@ -1,7 +1,10 @@
 <?php
-require_once 'entities/appException.class.php';
-require_once 'entities/connection.class.php';
-require_once 'utils/const.php';
+// require_once 'entities/appException.class.php';
+// require_once 'entities/connection.class.php';
+// require_once 'utils/const.php';
+
+namespace proyecto\entities;
+
 class App
 {
     public static $container = [];

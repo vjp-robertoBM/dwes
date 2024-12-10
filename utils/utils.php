@@ -1,4 +1,7 @@
 <?php
+
+    namespace proyecto\utils;
+
     function esOpcionMenuActiva(string $opcion): bool{
         if ($_SERVER['REQUEST_URI']==$opcion) {
             return true;

@@ -1,5 +1,6 @@
 <?php
-require_once 'entities/queryBuilder.class.php';
+// require_once 'entities/queryBuilder.class.php';
+namespace proyecto\entities;
 
 class MensajeRepositorio extends QueryBuilder
 {

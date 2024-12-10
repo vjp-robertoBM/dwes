@@ -1,6 +1,9 @@
 <?php
-require_once 'entities/database/IEntity.class.php';
-class Mensaje implements IEntity
+// require_once 'entities/database/IEntity.class.php';
+
+namespace proyecto\entities;
+
+class Mensaje implements database\IEntity
 {
     private $id;
     private $nombre;

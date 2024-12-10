@@ -1,6 +1,11 @@
 <?php
-require_once 'entities/app.class.php';
-require_once 'utils/const.php';
+// require_once 'entities/app.class.php';
+// require_once 'utils/const.php';
+
+namespace proyecto\entities;
+use PDO;
+use PDOException;
+
 class Connection
 {
     public static function make()

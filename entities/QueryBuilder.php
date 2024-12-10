@@ -1,6 +1,10 @@
 <?php
-require_once 'entities/queryException.class.php';
-require_once 'utils/const.php';
+// require_once 'entities/queryException.class.php';
+// require_once 'utils/const.php';
+namespace proyecto\entities;
+use PDO;
+use Exception;
+use PDOException;
 abstract class QueryBuilder
 {
     private $connection;
@@ -27,7 +31,7 @@ abstract class QueryBuilder
         return $pdoStatement->fetchAll(PDO::FETCH_CLASS | PDO::FETCH_PROPS_LATE, $this->classEntity);
     }
 
-    public function save(IEntity $entity): void
+    public function save(database\IEntity $entity): void
     {
         try {
             $parameters = $entity->toArray();

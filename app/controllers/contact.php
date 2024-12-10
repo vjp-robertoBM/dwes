@@ -1,9 +1,10 @@
 <?php
-require 'utils/utils.php';
-require 'entities/mensaje.class.php';
-require_once 'entities/queryBuilder.class.php';
-require_once 'entities/appException.class.php';
-require_once 'entities/repository/mensajeRepositorio.class.php';
+use proyecto\entities\MensajeRepositorio;
+use proyecto\entities\Mensaje;
+use proyecto\entities\App;
+use proyecto\entities\AppException;
+use proyecto\entities\QueryException;
+use PDOException;
 
 $errores = [];
 try {

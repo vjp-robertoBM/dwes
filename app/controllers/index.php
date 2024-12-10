@@ -1,10 +1,11 @@
 <?php
-require 'entities/imagenGaleria.class.php';
-require 'entities/asociado.class.php';
-require 'entities/repository/asociadoRepositorio.class.php';
-require 'entities/repository/categoriaRepositorio.class.php';
-require 'entities/repository/imagenGaleriaRepositorio.class.php';
-require 'utils/utils.php';
+use proyecto\entities\CategoriaRepositorio;
+use proyecto\entities\ImagenGaleriaRepositorio;
+use proyecto\entities\AsociadoRepositorio;
+use proyecto\entities\App;
+use proyecto\entities\AppException;
+use proyecto\entities\QueryException;
+use proyecto\utils;
 
 $erroresImagenes = [];
 $arrayImg = [];
@@ -42,6 +43,6 @@ try {
     $arrayAsociados = $asociadoRepositorio->findAll();
 }
 
-$asociados = extraerAsociados($arrayAsociados);
+$asociados = utils\extraerAsociados($arrayAsociados);
 
 require 'app/views/index.view.php';

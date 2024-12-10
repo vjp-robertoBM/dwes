@@ -1,6 +1,12 @@
 {
-    "require":{
+    "require": {
         "weew/app-monolog": "^1.12",
-        "monolog/monolog": "^1.27"
+        "monolog/monolog": "^1.27",
+        "ext-pdo": "*"
+    },
+    "autoload": {
+        "psr-4": {
+            "proyecto\\": ""
+        }
     }
 }

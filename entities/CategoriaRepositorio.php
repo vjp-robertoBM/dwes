@@ -1,5 +1,6 @@
 <?php
-require_once 'entities/queryBuilder.class.php';
+// require_once 'entities/queryBuilder.class.php';
+namespace proyecto\entities;
 
 class CategoriaRepositorio extends QueryBuilder
 {
@@ -7,5 +8,4 @@ class CategoriaRepositorio extends QueryBuilder
     {
         parent::__construct($table, $classEntity);
     }
-
 }

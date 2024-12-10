@@ -1,12 +1,13 @@
 <?php
-require 'utils/utils.php';
-require 'entities/file.class.php';
-require 'entities/imagenGaleria.class.php';
-require_once 'entities/queryBuilder.class.php';
-require_once 'entities/appException.class.php';
-require_once 'entities/repository/imagenGaleriaRepositorio.class.php';
-require_once 'entities/repository/categoriaRepositorio.class.php';
-require_once 'entities/categoria.class.php';
+use proyecto\entities\CategoriaRepositorio;
+use proyecto\entities\ImagenGaleriaRepositorio;
+use proyecto\entities\ImagenGaleria;
+use proyecto\entities\File;
+use proyecto\entities\FileException;
+use proyecto\entities\App;
+use proyecto\entities\AppException;
+use proyecto\entities\QueryException;
+use PDOException;
 
 $errores = [];
 $descripcion = "";
